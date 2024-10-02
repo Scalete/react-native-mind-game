@@ -17,6 +17,11 @@ const HomeStack = () => {
         component={screen.LevelsScreen}
         options={{headerShown: false}}
       />
+      <Stack.Screen
+        name="InfoScreen"
+        component={screen.InfoScreen}
+        options={{headerShown: false}}
+      />
     </Stack.Navigator>
   );
 };
