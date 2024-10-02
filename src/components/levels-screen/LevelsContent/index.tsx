@@ -1,28 +1,12 @@
 import {FC, useMemo} from 'react';
 import {getStyle} from './style';
-import {useNavigation} from '@react-navigation/native';
-import {
-  Dimensions,
-  Image,
-  ScrollView,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Dimensions, Image, ScrollView, TouchableOpacity} from 'react-native';
+import {levelsImages} from '@/utils/constants';
+import {useTypedNavigation} from '@/hooks/useTypedNavigation';
 
 const LevelsContent: FC = () => {
   const styles = useMemo(() => getStyle(), []);
-  const navigation = useNavigation();
-
-  const images = [
-    require('@/assets/img/levels/1.png'),
-    require('@/assets/img/levels/2.png'),
-    require('@/assets/img/levels/3.png'),
-    require('@/assets/img/levels/4.png'),
-    require('@/assets/img/levels/5.png'),
-    require('@/assets/img/levels/6.png'),
-    require('@/assets/img/levels/7.png'),
-    require('@/assets/img/levels/8.png'),
-  ];
+  const navigation = useTypedNavigation();
 
   const numColumns = 2;
   const screenWidth = Dimensions.get('window').width;
@@ -30,8 +14,13 @@ const LevelsContent: FC = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {images.map((image, index) => (
-        <TouchableOpacity key={index} style={styles.imageContainer}>
+      {levelsImages.map((image, index) => (
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate('GameScreen', {bgIndex: index + 1})
+          }
+          key={index}
+          style={styles.imageContainer}>
           <Image
             source={image}
             style={[{width: imageSize, height: imageSize}]}

@@ -3,13 +3,13 @@ import LinearGradient from 'react-native-linear-gradient';
 import {getStyle} from './style';
 import {useMemo} from 'react';
 import CustomBtn from '@/components/shared/CustomBtn';
-import {useNavigation} from '@react-navigation/native';
 import useStatusBarVisibility from '@/hooks/useStatusBarVisibility';
+import {useTypedNavigation} from '@/hooks/useTypedNavigation';
 
 const HomeTab = () => {
   const styles = useMemo(() => getStyle(), []);
   const {width, height} = Dimensions.get('window');
-  const navigation = useNavigation();
+  const navigation = useTypedNavigation();
   const logoSize = width * 0.5;
   const logoMarginTop = (height - logoSize) / 2 - height * 0.11;
 
