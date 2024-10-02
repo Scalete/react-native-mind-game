@@ -1,6 +1,6 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeTab from '../screens/HomeTab';
+import * as screen from '@/screens';
 
 const Stack = createNativeStackNavigator();
 
@@ -9,7 +9,12 @@ const HomeStack = () => {
     <Stack.Navigator>
       <Stack.Screen
         name="HomeTab"
-        component={HomeTab}
+        component={screen.HomeTab}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="LevelsScreen"
+        component={screen.LevelsScreen}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

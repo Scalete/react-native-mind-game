@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {FontsBaloo2, text} from '../../../modules/fonts';
+import {FontsBaloo2, text} from '@/modules/fonts';
 
 export const getStyle = () => {
   const styles = StyleSheet.create({
@@ -13,6 +13,8 @@ export const getStyle = () => {
     btn: {
       backgroundColor: '#6EBCF7',
       borderRadius: 50,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
     btnText: {
       textAlign: 'center',
