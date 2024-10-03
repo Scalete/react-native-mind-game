@@ -4,7 +4,7 @@ export type RootStackParamList = {
   HomeTab: undefined;
   LevelsScreen: undefined;
   InfoScreen: undefined;
-  GameScreen: {bgIndex: number};
+  GameScreen: undefined;
 };
 
 export type HomeTabRouteProp = RouteProp<RootStackParamList, 'HomeTab'>;
