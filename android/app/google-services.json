@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "859977578506",
+    "project_id": "my-mind-409cc",
+    "storage_bucket": "my-mind-409cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859977578506:android:b979718664b02f06ce87f3",
+        "android_client_info": {
+          "package_name": "com.game2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaNaRp2qpMfJZ5Rmo_CXsUL9hViswXk0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

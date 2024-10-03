@@ -88,6 +88,7 @@ const GeoLocationWrapper: React.FC<PropsWithChildren> = ({children}) => {
       );
       const data: GeocodingResponse = await response.json();
       const country = data.results[0]?.components?.country;
+      console.log('Country:', country);
       setIsUkraine(country === 'Ukraine');
       setLoading(false);
     } catch (error) {
